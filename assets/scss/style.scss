@@ -1,0 +1,607 @@
+
+
+$square_one_color: white;
+$square_two_color: #ce908e;
+$piece_one_color: #424451;
+$piece_two_color: #3f749e;
+$border: inherit;
+$font:'Luckiest Guy', cursive;
+
+*{
+
+	margin:0;
+	padding:0;
+}
+
+.save{
+
+	cursor:pointer;
+}
+
+h2{
+	text-align:center;
+	margin-top:0px;
+	text-transform:uppercase;
+	font-family:$font;
+	// margin-left:14rem;
+	line-height:70px;
+	letter-spacing:2px;
+}
+
+.fa-users, .fa-cogs, .fa-bomb, .fa-database{
+
+	margin-right:10px;
+}
+
+.error{
+
+	background-color:transparent;
+	position:relative;
+	bottom: 2rem;
+	border:none;
+}
+
+.imgprofile{
+
+	position: relative;
+	bottom:9rem;
+	border:4px solid white;
+	border-radius:50%;
+
+}
+
+
+.acc{
+
+	height:100vh;
+	// background-image:url("../img/train.jpg");
+	background-size:500px 700px;
+	background-color: #82E3EF;
+	width:100%;
+	text-align:center;
+	padding-top:10rem;
+	background-position:center center;
+	
+
+
+}
+.acc .num1, .num2, .num3, .num4{
+
+	border-radius:15px;
+	height:65px;
+	width:68vw;
+	margin-bottom:1rem;
+	color:white;
+	letter-spacing:1px;
+	font-family:$font;
+	font-size:20px;
+	outline:none;
+	padding-top:7px;
+
+}
+
+.num1{
+
+	background-color:#c5e5a7;
+	border:1px solid #c5e5a7;
+	line-height:50px;
+	// background-image:url("../img/disquette.png");
+	// background-repeat:no-repeat;
+	
+}
+.num1 img{
+
+		padding-right:15px;
+		position:relative;
+		top:5px;
+		right:10px;
+	}
+
+.num2{
+	background-color:#f7bc6f;
+	border:1px solid #f7bc6f;
+	line-height:50px;
+	padding-right:3rem;
+}
+.num2 img{
+
+		padding-right:15px;
+		position:relative;
+		top:5px;
+		right:1px;
+	}
+
+.num3{
+	background-color:#fa646a;
+	border:1px solid #fa646a;
+	line-height:50px;
+	padding-right:3rem;
+}
+
+.num3 img{
+
+		padding-right:15px;
+		position:relative;
+		top:5px;
+		right:70px;
+	}
+
+.num4{
+	background-color:#f7e00e;
+	border:1px solid #f7e00e;
+	line-height:50px;
+	padding-right:3rem;
+}
+
+.num4 img{
+
+		padding-right:15px;
+		position:relative;
+		top:5px;
+		right:70px;
+	}
+
+.num5{
+	
+	background-color:inherit;
+	border:none;
+	position: relative;
+	bottom:38rem;
+	left:14rem;
+
+
+}
+.acc .num5 img{
+	margin-right:1rem;
+}
+
+#nav {
+	position: relative;
+	z-index: 998;
+}
+
+.close:before, .close:after {
+  transform: rotate(-45deg);
+  content: '';
+  position: absolute;
+  top:3rem;
+  right:2rem;
+  display: block;
+  height: 10px;
+  width: 45px;
+  background-color: #fff;
+  transition: all 0.25s ease-out;
+}
+.close:after {
+  transform: rotate(-135deg);
+}
+.close:hover:before, .close:hover:after {
+  transform: rotate(0deg);
+}
+
+
+nav a .info{
+
+	position: absolute;
+	bottom:0px;
+	right:10px;
+	font-size:3rem;
+	cursor:pointer;
+
+}
+
+nav a .chevron{
+
+	position:absolute;
+	bottom:0px;
+	left:10px;
+	font-size:3rem;
+
+}
+
+.side-nav{
+
+	background-color:#82E3EF;
+	font-family:$font;
+	width:100vw;
+	height:100vh;
+	text-align:center;
+}
+
+ul button{
+
+	background-color:white;
+	border-radius:60px;
+	border-color:black;
+	padding:10px;
+	height:65px;
+	width:73vw;
+}
+// .waves-effect.waves-brown .waves-ripple{
+
+// 	background-color: rgb(83, 147, 244);
+// }
+
+// a.waves-effect.waves-light(href="/") Enquire
+
+ul li{
+
+	margin-bottom:3rem;
+	background-color:inherit;
+
+}
+
+.slide-out a:hover{
+	text-decoration:none;
+	background:white;
+}
+
+
+ul li:hover{
+	background-color:inherit;
+	text-decoration:none;
+}
+
+h1{
+	cursor: default;
+}
+
+#board{
+
+	border: 1px solid $border;
+	margin-bottom:6rem;
+}
+
+.row{
+	display: flex;
+	width: 100%;
+	margin-bottom:0px;
+}
+
+
+.square{
+	display: flex;
+	justify-content: center;
+	width: 73px;
+	height: 73px;
+	border: 0px solid #ce908e;
+}
+
+.red2{
+	background: $square_one_color;
+
+}
+.black2{
+	background: $square_two_color;
+}
+
+.red2.piece{
+	background: $piece_two_color;
+}
+
+.black2.piece{
+	background: $piece_one_color;
+}
+
+.piece{
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	margin-top: 12px;
+	border: 0px solid $border;
+}
+
+.center{
+	justify-content: center;
+}
+
+.piece{
+	line-height: 50px;
+	text-align: center;
+	color: white;
+}
+
+.piece.active.black2{
+	background: lighten(#c95820, 20%) !important;
+}
+
+.piece.active.black2:hover, .piece.active.red:hover{
+	cursor: pointer;
+}
+
+.piece.active.red2{
+	background: lighten(#c95820, 30%) !important;
+}
+
+.piece.active_group:hover{
+	cursor: pointer;
+}
+
+.piece.red2:active{
+
+}
+
+.info{
+
+	height:100vh;
+	background-color:#5387FA;
+	width:100vw;
+	display:none;
+
+}
+
+.info h2{
+
+	text-align:center;
+	font-size:35px;
+}
+
+.inf{
+
+	color:white;
+	font-size:30px;
+}
+
+button[type="checkbox"]{
+    display: inline-block;
+    margin:0 auto;
+    background-color:red;
+}
+
+
+.profil{
+  		
+  		background-color: #82E3EF;
+        height: 100vh;
+        background-image:url("../img/user.png");
+        background-repeat:no-repeat;
+         background-position: 50% 5%; 
+    }
+
+.editPro{
+
+	margin-top:3rem;
+}
+
+.infoUser{
+
+	color:white;
+	font-size:60px;
+	display:inline-block;
+	position:relative;
+	top:10px;
+	left:7rem;
+	letter-spacing:3px;
+}
+
+.previous{
+
+	position: relative;
+	top:2rem;
+	right:13rem;
+	background-color:transparent;
+	border:none;
+}
+
+.tdCenter1{
+
+	width:55%;
+	height:50px;
+	background-color:white;
+	border-radius:40px;
+	border:none;
+	margin-top:2rem;
+	margin-bottom:1rem;
+	font-family: 'Luckiest Guy', cursive;
+	font-size:21px;
+}
+
+.tdCenter1 a {
+
+	color:#68c2cc;
+}
+
+.tdCenter2{
+
+	width:60%;
+	height:50px;
+	background-color:white;
+	border-radius:40px;
+	border:none;
+    font-family: 'Luckiest Guy', cursive;
+    color:red;
+    font-size:21px;
+}
+
+input[type='submit'] {
+    background-image: url("../img/success.png");
+    background-position: 50% 80%;
+    background-repeat: no-repeat;
+    background-color:inherit;
+   	height:90px;
+   	margin:0 auto;
+   	margin-top:7rem;
+   	color:transparent;
+   	outline:none;
+}
+    // input, textarea, select{
+    //     display: flex;
+    //     margin:0 auto;
+    //     margin-bottom: 2rem;
+    //     margin-top: 1rem;
+    // }
+
+    table{
+        margin:0 auto;
+    }
+
+    p{
+        text-align: center;
+        font-family: 'Luckiest Guy', cursive;
+        color:blue;
+        position:relative;
+        top:13rem;
+        font-size:20px;
+
+    }
+    ::placeholder{
+        font-family: 'Luckiest Guy', cursive;
+        text-align:center;
+        color:lightgrey;
+        font-size:15px;
+    }
+
+    a{
+        text-decoration: none;
+        color: lightgrey;
+    }
+
+    option{
+        text-align: center;
+    }
+
+
+input{
+
+	border:none;
+	background-color:white;
+	border-radius:7px;
+	width:40%;
+	font-family: 'Luckiest Guy', cursive;
+	padding:12px 20px;
+	letter-spacing:1px;
+	color:lightgrey;
+	display:flex;
+}
+
+input[type=text]:not(.browser-default){
+
+	border:none;
+	width:60%;
+	border-radius:40px;
+    outline: none;
+    background-color:white;
+    margin:0 auto;
+    margin-top:20rem;
+    margin-bottom:1rem;
+    height:50px;
+    color:grey;
+    box-shadow: 2px 4px 6px;
+
+   
+}
+
+input[type=number]:not(.browser-default){
+
+	border:none;
+	width:60%;
+	border-radius:40px;
+	outline: none;
+	background-color:white;
+	margin:0 auto;
+	height:50px;
+	color:grey;
+	box-shadow: 2px 4px 6px;
+}
+
+form{
+
+	text-align: center;
+	margin-bottom:5rem;
+	height:100vh;
+}
+
+//     input[type=text]:focus, input[type=number]:focus, textarea:focus, select:focus {
+//     border: 2px solid #5387fa;
+// }
+
+.vueProfil{
+
+	height:100vh;
+	background-color: #82E3EF;
+}
+
+.vueProfil img{
+		
+	}
+.vueProfil td{
+
+	margin:0 auto;
+
+}
+
+@media screen and (min-width:320px) and (max-width: 640px) {
+
+
+h2{
+
+	color:white;
+
+
+}
+
+#board{
+
+	border: 1px solid $border;
+	margin-top:7rem;
+}
+
+// .button-collapse i{
+
+// 	color:#424451;
+
+// }
+
+.square{
+	display: flex;
+	justify-content: center;
+	width: 50px;
+	height:50px;
+	border: 1px solid #ce908e;
+}
+
+.piece{
+	width: 47px;
+	height: 47px;
+	border-radius: 100%;
+	border: 0px solid $border;
+}
+
+.red2.piece{
+	background: $piece_two_color;
+	margin-top:0px;
+	border: 1px solid inherit;
+}
+
+.black2.piece{
+	background: $piece_one_color;
+		margin-top:0px;
+		border: 1px solid inherit;
+}
+.red2{
+	background: $square_one_color;
+
+}
+.black2{
+	background: $square_two_color;
+}
+
+}
+
+#menuh {
+	position: absolute;
+	z-index: 999;
+	top:2px;
+	cursor: pointer;
+	color:white;
+	padding-left:2rem;
+}
+
+#slide-out {
+	transform: translateX(-100vw);
+	transition: transform 0.4s linear;
+	overflow:hidden;
+}
+#slide-out.is-active {
+	transform: translateX(0);
+}
